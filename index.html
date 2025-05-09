@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Completo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            100: '#bfc9d1',
+                            200: '#2d3748',
+                            300: '#1a202c',
+                            400: '#171923',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+    <form class="w-full max-w-lg bg-gray-800 p-8 rounded-lg shadow-2xl space-y-6">
+        <h2 class="text-2xl font-semibold text-blue-400 text-center mb-8">Formulário Completo</h2>
+
+        <!-- Texto -->
+        <div class="space-y-2">
+            <label for="text" class="block text-gray-300">Texto</label>
+            <input type="text" id="text" data-cy="text" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100"
+                placeholder="Digite algo...">
+        </div>
+
+        <!-- Email -->
+        <div class="space-y-2">
+            <label for="email" class="block text-gray-300">E-mail</label>
+            <input type="email" id="email" data-cy="email" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100"
+                placeholder="seu@email.com">
+        </div>
+
+        <!-- Senha -->
+        <div class="space-y-2">
+            <label for="password" class="block text-gray-300">Senha</label>
+            <input type="password" id="password" data-cy="password" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100"
+                placeholder="Senha">
+        </div>
+
+        <!-- Número -->
+        <div class="space-y-2">
+            <label for="number" class="block text-gray-300">Número</label>
+            <input type="number" id="number" data-cy="number" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100"
+                placeholder="0">
+        </div>
+
+        <!-- Telefone -->
+        <div class="space-y-2">
+            <label for="tel" class="block text-gray-300">Telefone</label>
+            <input type="tel" id="tel" data-cy="tel" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100"
+                placeholder="(99) 99999-9999">
+        </div>
+
+        <!-- URL -->
+        <div class="space-y-2">
+            <label for="url" class="block text-gray-300">URL</label>
+            <input type="url" id="url" data-cy="url" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100"
+                placeholder="https://">
+        </div>
+
+        <!-- Data -->
+        <div class="space-y-2">
+            <label for="date" class="block text-gray-300">Data</label>
+            <input type="date" id="date" data-cy="date" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100">
+        </div>
+
+        <!-- Hora -->
+        <div class="space-y-2">
+            <label for="time" class="block text-gray-300">Hora</label>
+            <input type="time" id="time" data-cy="time" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100">
+        </div>
+
+        <!-- Data e Hora -->
+        <div class="space-y-2">
+            <label for="datetime" class="block text-gray-300">Data e Hora</label>
+            <input type="datetime-local" id="datetime" data-cy="datetime" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100">
+        </div>
+
+        <!-- Mês -->
+        <div class="space-y-2">
+            <label for="month" class="block text-gray-300">Mês</label>
+            <input type="month" id="month" data-cy="month" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100">
+        </div>
+
+        <!-- Semana -->
+        <div class="space-y-2">
+            <label for="week" class="block text-gray-300">Semana</label>
+            <input type="week" id="week" data-cy="week" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100">
+        </div>
+
+        <!-- Cor -->
+        <div class="space-y-2">
+            <label for="color" class="block text-gray-300">Cor</label>
+            <input type="color" id="color" data-cy="color" value="#3B82F6" 
+                class="w-full h-10 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20">
+        </div>
+
+        <!-- Arquivo -->
+        <div class="space-y-2">
+            <label for="file" class="block text-gray-300">Arquivo</label>
+            <input type="file" id="file" data-cy="file" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600">
+        </div>
+
+        <!-- Range -->
+        <div class="space-y-2">
+            <label for="range" class="block text-gray-300">Range</label>
+            <input type="range" id="range" data-cy="range" min="0" max="100" value="50" 
+                class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-500">
+        </div>
+
+        <!-- Select -->
+        <div class="space-y-2">
+            <label for="select" class="block text-gray-300">Seleção</label>
+            <select id="select" data-cy="select" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100">
+                <option value="">Selecione...</option>
+                <option value="opcao1">Opção 1</option>
+                <option value="opcao2">Opção 2</option>
+                <option value="opcao3">Opção 3</option>
+            </select>
+        </div>
+
+        <!-- Textarea -->
+        <div class="space-y-2">
+            <label for="textarea" class="block text-gray-300">Textarea</label>
+            <textarea id="textarea" data-cy="textarea" rows="3" 
+                class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-gray-100"
+                placeholder="Digite sua mensagem..."></textarea>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="space-y-2">
+            <label class="block text-gray-300">Checkbox</label>
+            <div class="space-x-6">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="checkbox1" data-cy="checkbox1" 
+                        class="w-4 h-4 text-blue-500 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2">
+                    <span class="ml-2 text-gray-300">Opção 1</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="checkbox2" data-cy="checkbox2" 
+                        class="w-4 h-4 text-blue-500 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2">
+                    <span class="ml-2 text-gray-300">Opção 2</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Radio -->
+        <div class="space-y-2">
+            <label class="block text-gray-300">Radio</label>
+            <div class="space-x-6">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="radio" id="radio1" data-cy="radio1" 
+                        class="w-4 h-4 text-blue-500 bg-gray-700 border-gray-600 focus:ring-blue-500 focus:ring-2">
+                    <span class="ml-2 text-gray-300">Sim</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="radio" id="radio2" data-cy="radio2" 
+                        class="w-4 h-4 text-blue-500 bg-gray-700 border-gray-600 focus:ring-blue-500 focus:ring-2">
+                    <span class="ml-2 text-gray-300">Não</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Botão Submit -->
+        <button type="submit" id="submit" data-cy="submit" 
+            class="w-full py-3 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors duration-200">
+            Enviar
+        </button>
+
+        <p class="text-sm text-gray-400 text-center">Todos os campos são exemplos de inputs HTML5.</p>
+    </form>
+</body>
+</html>
